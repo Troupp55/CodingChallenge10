@@ -1,9 +1,7 @@
-// example.js
 d3.csv("data/purchase_orders.csv").then(function(data) {
-    // Select the unordered list
+    console.log(data); // Log data to check if it is loaded correctly
     var ul = d3.select("#orders-list");
 
-    // Append an <li> element for each purchase order
     data.forEach(function(d) {
         ul.append("li")
           .text(`${d.customerName} - Order ID: ${d.orderId}: ${d.purchaseAmount}`);
